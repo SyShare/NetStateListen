@@ -9,25 +9,8 @@
         android:id="@+id/sdcardTip"
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:text="Sd卡说明" />
+        android:text="SecondActivity" />
 
 
-    <Button
-        android:id="@+id/phone"
-        android:layout_width="120dp"
-        android:layout_height="40dp"
-        android:text="电话" />
 
-
-    <Button
-        android:id="@+id/sdcard"
-        android:layout_width="120dp"
-        android:layout_height="40dp"
-        android:text="Sd卡" />
-
-    <Button
-        android:id="@+id/multi"
-        android:layout_width="120dp"
-        android:layout_height="40dp"
-        android:text="定位，短信，wifi" />
 </LinearLayout>

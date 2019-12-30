@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PermissionHelper-master.iml" filepath="$PROJECT_DIR$/PermissionHelper-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/PermissionHelper-master-app.iml" filepath="$PROJECT_DIR$/app/PermissionHelper-master-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/compiler/PermissionHelper-master-compiler.iml" filepath="$PROJECT_DIR$/compiler/PermissionHelper-master-compiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libannotation/PermissionHelper-master-libannotation.iml" filepath="$PROJECT_DIR$/libannotation/PermissionHelper-master-libannotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libpermission/PermissionHelper-master-libpermission.iml" filepath="$PROJECT_DIR$/libpermission/PermissionHelper-master-libpermission.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/compiler/compiler.iml" filepath="$PROJECT_DIR$/compiler/compiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libannotation/libannotation.iml" filepath="$PROJECT_DIR$/libannotation/libannotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libpermission/libpermission.iml" filepath="$PROJECT_DIR$/libpermission/libpermission.iml" />
+    </modules>
+  </component>
+</project>

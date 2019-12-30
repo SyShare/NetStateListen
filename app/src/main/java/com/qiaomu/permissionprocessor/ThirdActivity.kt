@@ -1,33 +1,33 @@
 package com.qiaomu.permissionprocessor
 
-import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import android.widget.Button
 import android.widget.Toast
 import com.qiaomu.annotation.NetChangeState
 import com.qiaomu.libpermission.NetMode
+import com.qiaomu.libpermission.NetStateHelper.registerObserver
+import com.qiaomu.libpermission.NetStateHelper.unRegisterObserver
 import com.qiaomu.libpermission.annotation.RegisterInjectEvent
 
 /**
  * Created by qiaomu on 2017/10/9.
  */
-class MainActivity : AppCompatActivity() {
-
+class ThirdActivity : AppCompatActivity() {
 
     @RegisterInjectEvent(mode = NetMode.REGISTER_MODE)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        findViewById<View>(R.id.sdcardTip).setOnClickListener {
-            startActivity(Intent(this@MainActivity, SecondActivity::class.java))
+        findViewById<Button>(R.id.sdcardTip).setOnClickListener {
         }
-    }
 
+    }
 
     @NetChangeState
     fun onNetState(isAvailable: Boolean) {
-        Toast.makeText(this, "MainActivity", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "ThirdActivity", Toast.LENGTH_SHORT).show()
     }
 
     @RegisterInjectEvent(mode = NetMode.UN_REGISTER_MODE)
