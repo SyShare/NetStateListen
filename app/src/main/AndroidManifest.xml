@@ -35,5 +35,6 @@
             android:label="SecondActivity"/>
         <activity android:name=".ThirdActivity"
             android:label="ThirdActivity"/>
+        <activity android:name=".MusicPlayerActivity" />
     </application>
 </manifest>

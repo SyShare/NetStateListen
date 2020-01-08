@@ -9,6 +9,7 @@ import java.lang.annotation.Annotation;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -22,6 +23,8 @@ import javax.lang.model.element.Element;
 import javax.lang.model.element.ElementKind;
 import javax.lang.model.element.ExecutableElement;
 import javax.lang.model.element.TypeElement;
+import javax.lang.model.type.TypeKind;
+import javax.lang.model.type.TypeMirror;
 import javax.lang.model.util.Elements;
 import javax.tools.Diagnostic;
 
@@ -95,6 +98,13 @@ public class PermissionProcessor extends AbstractProcessor {
 
             Annotation annotation = method.getAnnotation(annotationClaz);
             if (annotation instanceof NetChangeState) {
+                TypeMirror typeMirror = method.getReturnType();
+                if (typeMirror.getKind() != TypeKind.VOID)
+                    throw new RuntimeException(method.getSimpleName() + "Method return must be void");
+                List<?> parameters = method.getTypeParameters();
+                if (parameters.size() != 1) {
+                    throw new RuntimeException(method.getSimpleName() + "Method can only have one parameter");
+                }
                 proxyInfo.method = method;
             } else {
                 error(element, "%s not support .", annotationClaz.getSimpleName());

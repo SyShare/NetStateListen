@@ -4,6 +4,15 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'android-aspectjx'
 android {
+    signingConfigs {
+        config {
+            keyAlias 'keystore'
+            keyPassword '123456'
+            storeFile file('test_keystore.jks')
+            storePassword '123456'
+        }
+    }
+
    compileSdkVersion 28
     buildToolsVersion "27.1.1"
     defaultConfig {
@@ -12,15 +21,19 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-
+        signingConfig signingConfigs.config
     }
     buildTypes {
 	  debug {
+          debuggable true
             minifyEnabled false
+          signingConfig signingConfigs.config
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         release {
-            minifyEnabled false
+            debuggable false
+            minifyEnabled true
+            signingConfig signingConfigs.config
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }

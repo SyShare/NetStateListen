@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.qiaomu.annotation.NetChangeState
 import com.qiaomu.libpermission.NetMode
 import com.qiaomu.libpermission.annotation.RegisterInjectEvent
+import kotlinx.android.synthetic.main.activity_main.*
 
 /**
  * Created by qiaomu on 2017/10/9.
@@ -21,6 +22,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         findViewById<View>(R.id.sdcardTip).setOnClickListener {
             startActivity(Intent(this@MainActivity, SecondActivity::class.java))
+        }
+        MusicPlayer.setOnClickListener {
+            startActivity(Intent(this@MainActivity, MusicPlayerActivity::class.java))
         }
     }
 

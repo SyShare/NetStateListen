@@ -11,6 +11,22 @@
         android:layout_height="40dp"
         android:text="SecondActivity" />
 
+    <Button
+        android:id="@+id/MusicPlayer"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="MusicPlayerActivity" />
 
+    <Button
+        android:id="@+id/player"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="player" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="stop" />
 
 </LinearLayout>
