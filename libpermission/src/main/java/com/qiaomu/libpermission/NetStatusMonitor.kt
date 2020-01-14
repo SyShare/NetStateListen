@@ -14,7 +14,7 @@ import kotlin.properties.Delegates
  * PS: Not easy to write code, please indicate.
  */
 @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
-object NetStatusMonitor {
+internal object NetStatusMonitor {
 
     interface Listener {
         fun onLost()

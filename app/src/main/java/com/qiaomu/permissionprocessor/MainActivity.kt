@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         MusicPlayer.setOnClickListener {
             startActivity(Intent(this@MainActivity, MusicPlayerActivity::class.java))
         }
+
     }
 
 

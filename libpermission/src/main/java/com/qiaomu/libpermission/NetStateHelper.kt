@@ -8,7 +8,7 @@ import java.lang.ClassNotFoundException as ClassNotFoundException1
  * please don't modify at will!
  */
 
-object NetStateHelper {
+internal object NetStateHelper {
 
     private const val SUFFIX = "$\$NetStateProxy"
 
@@ -42,13 +42,13 @@ object NetStateHelper {
     }
 
 
-    fun unRegisterObserver(register: Any?) {
+    internal fun unRegisterObserver(register: Any?) {
         if (!dispatchMap.isEmpty() && dispatchMap.containsKey(register)) {
             dispatchMap.remove(register)
         }
     }
 
-    fun registerObserver(register: Any?) {
+    internal   fun registerObserver(register: Any?) {
         var classProxyImpl = dispatchMap[register]
         if (classProxyImpl == null) {
             classProxyImpl = findNetStateProxy(register)
