@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Toast
 import com.qiaomu.annotation.NetChangeState
 import com.qiaomu.libpermission.NetMode
+import com.qiaomu.libpermission.NetStateHelper
 import com.qiaomu.libpermission.annotation.RegisterInjectEvent
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -26,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         MusicPlayer.setOnClickListener {
             startActivity(Intent(this@MainActivity, MusicPlayerActivity::class.java))
         }
-
     }
 
 

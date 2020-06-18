@@ -7,8 +7,6 @@ import android.widget.Button
 import android.widget.Toast
 import com.qiaomu.annotation.NetChangeState
 import com.qiaomu.libpermission.NetMode
-import com.qiaomu.libpermission.NetStateHelper.registerObserver
-import com.qiaomu.libpermission.NetStateHelper.unRegisterObserver
 import com.qiaomu.libpermission.annotation.RegisterInjectEvent
 
 /**
@@ -16,7 +14,6 @@ import com.qiaomu.libpermission.annotation.RegisterInjectEvent
  */
 class ThirdActivity : AppCompatActivity() {
 
-    @RegisterInjectEvent(mode = NetMode.REGISTER_MODE)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -30,7 +27,6 @@ class ThirdActivity : AppCompatActivity() {
         Toast.makeText(this, "ThirdActivity", Toast.LENGTH_SHORT).show()
     }
 
-    @RegisterInjectEvent(mode = NetMode.UN_REGISTER_MODE)
     override fun onDestroy() {
         super.onDestroy()
     }

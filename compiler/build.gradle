@@ -1,12 +1,15 @@
 apply plugin: 'java'
-apply from: '../maven_push.gradle'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.xiaotuo.maven:lib-annotation:1.0.0'
-    implementation 'com.google.auto.service:auto-service:1.0-rc2'
-    implementation 'com.squareup:javapoet:1.8.0'
+    implementation 'com.google.auto.service:auto-service:1.0-rc4'
+    implementation 'com.squareup:javapoet:1.12.1'
+    implementation project(':libannotation')
 }
 
-sourceCompatibility = "1.7"
-targetCompatibility = "1.7"
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

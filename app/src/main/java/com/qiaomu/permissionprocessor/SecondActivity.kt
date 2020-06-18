@@ -17,7 +17,6 @@ import com.qiaomu.libpermission.annotation.RegisterInjectEvent
  */
 class SecondActivity : AppCompatActivity() {
 
-    @RegisterInjectEvent(mode = NetMode.REGISTER_MODE)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,6 +24,7 @@ class SecondActivity : AppCompatActivity() {
             startActivity(Intent(this@SecondActivity, ThirdActivity::class.java))
         }
         findViewById<Button>(R.id.sdcardTip).text = "ThirdActivity"
+        registerObserver(this)
     }
 
 
@@ -33,7 +33,6 @@ class SecondActivity : AppCompatActivity() {
         Toast.makeText(this, "SecondActivity", Toast.LENGTH_SHORT).show()
     }
 
-    @RegisterInjectEvent(mode = NetMode.UN_REGISTER_MODE)
     override fun onDestroy() {
         super.onDestroy()
         unRegisterObserver(this)

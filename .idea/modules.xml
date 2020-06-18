@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/NetStateListen.iml" filepath="$PROJECT_DIR$/NetStateListen.iml" group="NetStateListen" />
+      <module fileurl="file://$PROJECT_DIR$/app/NetStateListen-app.iml" filepath="$PROJECT_DIR$/app/NetStateListen-app.iml" group="NetStateListen/app" />
+      <module fileurl="file://$PROJECT_DIR$/compiler/NetStateListen-compiler.iml" filepath="$PROJECT_DIR$/compiler/NetStateListen-compiler.iml" group="NetStateListen/compiler" />
+      <module fileurl="file://$PROJECT_DIR$/libannotation/NetStateListen-libannotation.iml" filepath="$PROJECT_DIR$/libannotation/NetStateListen-libannotation.iml" group="NetStateListen/libannotation" />
+      <module fileurl="file://$PROJECT_DIR$/libpermission/NetStateListen-libpermission.iml" filepath="$PROJECT_DIR$/libpermission/NetStateListen-libpermission.iml" group="NetStateListen/libpermission" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NetStateListen_buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/NetStateListen_buildSrc.iml" group="NetStateListen/NetStateListen_buildSrc" />
       <module fileurl="file://$PROJECT_DIR$/PermissionHelper-master.iml" filepath="$PROJECT_DIR$/PermissionHelper-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/PermissionHelper-master-app.iml" filepath="$PROJECT_DIR$/app/PermissionHelper-master-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/compiler/PermissionHelper-master-compiler.iml" filepath="$PROJECT_DIR$/compiler/PermissionHelper-master-compiler.iml" />

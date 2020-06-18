@@ -102,8 +102,8 @@ public class PermissionProcessor extends AbstractProcessor {
                 if (typeMirror.getKind() != TypeKind.VOID)
                     throw new RuntimeException(method.getSimpleName() + "Method return must be void");
                 List<?> parameters = method.getTypeParameters();
-                if (parameters.size() != 2) {
-                    throw new RuntimeException(method.getSimpleName() + "Method can only have two parameter");
+                if (parameters.size() > 1) {
+                    throw new RuntimeException(method.getSimpleName() + "Method can only have one parameter");
                 }
                 proxyInfo.method = method;
             } else {
